@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- by me (Line NO) 4 5 8 9-->
+    <!-- this is our beans -->
+    <!-- "Package name" and "Class Name"-->
+
+    <bean name="Emp1" class="com.springcore.Emp">
+        <property name="name" value="Radhey" />
+        <property name="phones">
+            <list>
+                <value>7023849744</value>
+                <value>6899504899</value>
+                <value>9364784747</value>
+                <value>null</value>
+                <null/>
+                <!-- we can use null tag as well -->
+                <!-- if there is only one value then there is no need to use list tag("it's a list property") -->
+                <!--for empty list "Just use List tag " -->
+            </list>
+        </property>
+        <property name="address">
+            <set>
+                <value>Delhi</value>
+                <value>Lucknow</value>
+                <value>Kanpur</value>
+                <value>null</value>
+                <null/>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="java" value="2month" />
+                <entry key="C++" value="3month" />
+                <entry key="Python" value="1.5month" />
+            </map>
+        </property>
+        <property name="propert">
+            <props>
+                <prop key="name">durgesh</prop>
+                <prop key="channelName">Learncode with Durgesh</prop>
+            </props>
+        </property>
+
+    </bean>
+
+
+</beans>

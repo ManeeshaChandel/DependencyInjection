@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+   <bean class="using_cnstrctr_dependency.Certi" name="cer">
+       <constructor-arg value="Android using kotlin"/>
+   </bean>
+    <!--
+    we can use like these 2 as well
+    <bean class="using_cnstrctr_dependency.Certi" name="cer">
+       <constructor-arg>
+       <value>Java is very popular</value>
+       </constructor-arg>
+   </bean>
+
+   OR
+
+    <bean class="using_cnstrctr_dependency.Certi" name="cer" c:name="Python programming>
+   </bean>
+
+   <bean class="using_cnstrctr_dependency.Certi" name="cer">
+       <constructor-arg value="Android using kotlin"/>
+   </bean>
+
+
+     we have used p schema here. Same we can use c schema for constructor injection
+
+    -->
+
+    <bean class="using_cnstrctr_dependency.Person" name="pson">
+                                                      <!-- will give value to the constructor whose parameter has-->
+        <constructor-arg value="Durgesh"/>            <!-- first argument as String-->
+        <constructor-arg value="123" type="int"/>     <!-- second argument as int-->
+        <!-- here "type" is using for ambiguity -->
+        <constructor-arg ref="cer"/> <!--simply I put the object of above bean clas i.e. name="cer" to the ref -->
+    </bean>
+    <!-- using constructor-arg tag for constructor injection ,
+    before that we were using property tag for property injection -->
+
+    </beans>
