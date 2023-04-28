@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean class="Spring_Basics.AutoWiring.Address" name="address"> <!-- name should be same as given inside Employee class for autowiring
+                                                       "byName" else it will give null-->
+        <property name="Street" value="Temp Street" />
+        <property name="City" value="Delhi" />
+    </bean>
+    <bean class="Spring_Basics.AutoWiring.Address" name="address1"> <!-- you can not make another object when using "byType" autowiring
+                                                      as it w=compare with class="AutoWiring.Address"
+                                                      in this case it will give compiler error-->
+        <property name="Street" value="Second Street" />
+        <property name="City" value="Kanpur" />
+    </bean>
+    <bean class="Spring_Basics.AutoWiring.Employee" name="emp1" autowire="constructor"/>
+<!--  we need to have only one bean for "constructor" and "byType" as well -->
+</beans>

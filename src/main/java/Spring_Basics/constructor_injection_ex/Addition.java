@@ -1,8 +1,8 @@
-package constructor_injection_ex;
+package Spring_Basics.constructor_injection_ex;
 
 public class Addition {
-    private int a;
-    private int b;
+    private double a;
+    private double b;
     public Addition(int a,int b){
         this.a=a;
         this.b=b;

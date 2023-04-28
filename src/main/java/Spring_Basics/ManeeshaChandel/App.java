@@ -1,4 +1,4 @@
-package ManeeshaChandel;
+package Spring_Basics.ManeeshaChandel;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -13,7 +13,7 @@ public class App
     {
 
         System.out.println( "Hello World!" );
-        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("SpringBasics_Config/config.xml");
         //ApplicationContext is an interface
 
 //      Student /*--taking as an object--*/ obj1=/*--needs typecasting--*/(Student) context.getBean("student1");
