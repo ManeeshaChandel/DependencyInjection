@@ -10,7 +10,7 @@
     <!-- by me (Line NO) 4 5 8 9-->
     <!-- this is our beans -->
     <!-- "Package name" and "Class Name"-->
-    <bean class="ManeeshaChandel.Student" name="student1"> <!-- name will always be unique of a class-->
+    <bean class="Spring_Basics.ManeeshaChandel.Student" name="student1"> <!-- name will always be unique of a class-->
         <property name="studentId">
             <value>22344</value>
         </property>
@@ -23,12 +23,12 @@
             <value>Delhi</value>
         </property>
     </bean>
-    <bean class="ManeeshaChandel.Student" name="student2">
+    <bean class="Spring_Basics.ManeeshaChandel.Student" name="student2">
         <!--using value as attribute(i.e. using inside property opening tag)  -->
         <property name="studentId" value="575" />
         <property name="studentName" value="Ram Singh" />
         <property name="studentAddress" value="Delhi" />  <!-- just by using self-closing tag -->
     </bean>
     <!-- using p schema--><!--we can remove property tag as well -->
-    <bean class="ManeeshaChandel.Student" name="student3" p:studentId="2234" p:studentAddress="Lucknow" p:studentName="Shyam Singh" />
+    <bean class="Spring_Basics.ManeeshaChandel.Student" name="student3" p:studentId="2234" p:studentAddress="Lucknow" p:studentName="Shyam Singh" />
 </beans>

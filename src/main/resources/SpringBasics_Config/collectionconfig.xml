@@ -11,7 +11,7 @@
     <!-- this is our beans -->
     <!-- "Package name" and "Class Name"-->
 
-    <bean name="Emp1" class="com.springcore.Emp">
+    <bean name="Emp1" class="Spring_Basics.springcore.Emp">
         <property name="name" value="Radhey" />
         <property name="phones">
             <list>
