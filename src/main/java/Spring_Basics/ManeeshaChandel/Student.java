@@ -1,4 +1,4 @@
-package ManeeshaChandel;
+package Spring_Basics.ManeeshaChandel;
 
 public class Student {
    private int studentId;

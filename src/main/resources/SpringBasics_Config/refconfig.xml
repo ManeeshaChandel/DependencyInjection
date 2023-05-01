@@ -10,11 +10,11 @@
        http://www.springframework.org/schema/context/spring-context.xsd">
 
        <!-- this is our beans -->
-       <bean class="springcore.ref.B" name="bref">
+       <bean class="Spring_Basics.ref.B" name="bref">
            <property name="y" value="90" />
        </bean>
        <!-- ref as p schema -->
-       <bean class="springcore.ref.A" name="aref" p:x="12" p:ob-ref="bref"/>
+       <bean class="Spring_Basics.ref.A" name="aref" p:x="12" p:ob-ref="bref"/>
        <!--
        we are using p schema here. Same we can use c schema for constructor injection
 

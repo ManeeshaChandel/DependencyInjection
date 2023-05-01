@@ -1,4 +1,4 @@
-package using_cnstrctr_dependency;
+package Spring_Basics.using_cnstrctr_dependency;
 
 public class Person {
     private String name;

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--    very very imp  -->
+<!--    annotations are by default disable -->
+<!--    <context:annotation-config />&lt;!&ndash; use this tag for enabling all annotations &ndash;&gt;-->
+
+
+<!--    <bean class="springLifeCycle.Samosa" name="samosa1" init-method="hey" destroy-method="bye">-->
+<!--        <property name="price" value="10" />-->
+<!--    </bean>-->
+    <bean class="Spring_Basics.springLifeCycle.Pepsi" name="pepsi1">
+        <property name="price" value="5"/>
+    </bean>
+    <bean class="Spring_Basics.springLifeCycle.Nuts" name="nuts1">
+        <property name="price" value="8.56"/>
+    </bean>
+
+   <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+<!--    ctrl+shif+N -->
+<!-- This above bean is for (when you don't want enable every annotation) enable postConstruct and predestroy annotation  only -->
+</beans>

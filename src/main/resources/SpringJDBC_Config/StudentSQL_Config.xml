@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--JdbcTemplate is a class in the Spring Framework that simplifies the use of JDBC
+    (Java Database Connectivity) API to interact with relational databases.
+     JdbcTemplate provides methods to execute SQL queries and updates, including SELECT, INSERT, UPDATE, DELETE, and stored procedures.-->
+
+    <!--jdbcTemplate takes dataSource object /but dataSource is an interface/so jdbcTemplate will take object of child class of
+    dataSource which is implementing this interface i,e. DriverManagerDataSource-->
+    <!--DriverManagerDataSource takes four parameter only -->
+
+    <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" name="ds">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/><!-- we can find driver name from internet for mysql/oracle/-->
+        <property name="url" value="jdbc:mysql://localhost:3306/springjdbc?useSSL=false"/> <!--here springjdbc is name of our created database-->
+        <property name="username" value="root"/>
+        <property name="password" value="Manisha@27"/>
+    </bean>
+    <bean class="org.springframework.jdbc.core.JdbcTemplate" name="jdbcTemplate">
+        <property name="dataSource">
+            <ref bean="ds"/>
+        </property>
+    </bean>
+
+    <bean class="Spring_JDBC.Dao.StudentDaoImplement" name="StudentDaoImpl">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+           <!--  first jdbcTemplate is the attribute of class StudentDaoImplement and second bean name of above bean -->
+    </bean>
+
+
+</beans>
